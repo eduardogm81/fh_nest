@@ -56,3 +56,20 @@ Añadir las librerías necesarias para uar los validadores
 ```bash
   yarn add class-validator class-transformer
 ```
+
+
+
+
+## Notas adicionales
+
+Cerrar un proceso que se ha quedado pillado en el puerto 3000:
+```bash
+# Con esto localizamos el proceso que se está ejecutando en el puerto 3000
+  netstat -ano | findstr :3000
+
+# Nos devuelve un listado de este tipo:
+  TCP    0.0.0.0:3000     0.0.0.0:0     LISTENING     1234
+
+# El último valor es el PID del proceso que usamos para hacerle un kill:
+  taskkill /PID 1234 /F
+```

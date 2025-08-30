@@ -1,6 +1,6 @@
 # Definir variables iniciales
 @serverUrl = http://localhost:3000
-@id = c72ebfb9-90bb-4d6c-ad9b-5c71fefe5159
+@id = f71037cf-1d26-4c93-b6f4-12aa595324ef
 
 ### Obtener todos los coches
 GET {{serverUrl}}/cars
@@ -22,10 +22,16 @@ PATCH {{serverUrl}}/cars/{{id}}
 Content-Type: application/json
 
 {
-  "id": {{id}},
-  "brand": "Toyota",
-  "model": "Corolla"
+  "brand": "Toyota1",
+  "model": "Corolla2"
 }
+
+###
+#{
+#  "id": "{{id}}",
+#  "brand": "Toyota",
+#  "model": "Corolla1"
+#}
 
 ### Borrar un coche
 DELETE {{serverUrl}}/cars/{{id}}

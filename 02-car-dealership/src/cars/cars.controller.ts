@@ -2,6 +2,7 @@ import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post, UsePi
 import * as console from 'node:console';
 import { CarsService } from './cars.service';
 import { CreateCarDto } from './dto/create-car.dto';
+import { UpdateCarDto } from "./dto/update-car.dto";
 
 @Controller('cars')
 export class CarsController {
@@ -27,8 +28,11 @@ export class CarsController {
   }
 
   @Patch(':id')
-  updateCar( @Param('id') id: string, @Body() body: any ) {
-    return { ok: true, method: 'Patch', id, body };
+  updateCar(
+      @Param('id', ParseUUIDPipe) id: string,
+      @Body() updateCarDto: UpdateCarDto
+  ) {
+    return this.carsService.update( id, updateCarDto );
   }
 
   @Delete(':id')
