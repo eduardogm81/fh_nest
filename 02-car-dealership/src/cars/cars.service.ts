@@ -35,7 +35,7 @@ export class CarsService {
     return car;
   }
 
-  create(createCarDto: CreateCarDto): Car {
+  create( createCarDto: CreateCarDto ): Car {
     const car: Car = {
       id: uuid(),
       ...createCarDto
@@ -44,7 +44,7 @@ export class CarsService {
     return car;
   }
 
-  update(id: string, updateCarDto: UpdateCarDto): Car {
+  update( id: string, updateCarDto: UpdateCarDto ): Car {
     if (updateCarDto.id && updateCarDto.id !== id)
       throw new BadRequestException(`Car id not match with the body`)
 
@@ -62,6 +62,11 @@ export class CarsService {
       return car;
     });
     return carDB;
+  }
+
+  delete( id: string ) {
+    const carToDelete = this.findOneById(id); // Para lanzar una excepción si no existe
+    this.cars = this.cars.filter(car => car.id !== id);
   }
 
 }

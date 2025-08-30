@@ -1,6 +1,6 @@
 # Definir variables iniciales
 @serverUrl = http://localhost:3000
-@id = f71037cf-1d26-4c93-b6f4-12aa595324ef
+@id = 4f1ffa65-7366-4316-8047-f50b14118e51
 
 ### Obtener todos los coches
 GET {{serverUrl}}/cars
