@@ -52,4 +52,7 @@ Para que el IDE registre los tipos de uuid a la hora de importarlos:
   yarn add -D @types/uuid
 ```
 
-
+Añadir las librerías necesarias para uar los validadores
+```bash
+  yarn add class-validator class-transformer
+```
