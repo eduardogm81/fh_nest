@@ -1,0 +1,29 @@
+# Definir variables iniciales
+@serverUrl = http://localhost:3000
+@id = 2c17835e-f60c-47c4-b16f-275cc503fa6d
+
+### Obtener todos los coches
+GET {{serverUrl}}/brands
+
+### Obtener un coche por id
+GET {{serverUrl}}/brands/{{id}}
+
+### Crear un coche nuevo
+POST {{serverUrl}}/brands
+Content-Type: application/json
+
+{
+  "name": "Volvo"
+}
+
+### Actualizar un coche
+PATCH {{serverUrl}}/brands/{{id}}
+Content-Type: application/json
+
+{
+  "name": "Volvo1"
+}
+
+### Borrar un coche
+DELETE {{serverUrl}}/brands/{{id}}
+

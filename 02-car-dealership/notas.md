@@ -36,6 +36,10 @@ Lanzar servidor con watch:
 Eliminar la dependencia prettier (para que no marque errores por saltos de línea y espacios)
 ```bash
   yarn remove prettier
+  
+  
+  yarn remove eslint-config-prettier
+  yarn remove eslint-plugin-prettier
 ```
 
 Añadir uuid para tener herramientas para generar ids de tipo uuid
@@ -57,8 +61,12 @@ Añadir las librerías necesarias para uar los validadores
   yarn add class-validator class-transformer
 ```
 
+## Nest cli resource
 
-
+Generamos mediante nest todo lo ncesario para la entidad brands
+```bash
+  nest g res brands --no-spec
+```
 
 ## Notas adicionales
 
