@@ -1,24 +1,24 @@
-# Definir variable id:
-@id = bbccb59f-6fc0-4faa-b1db-25ca1e66f7f8
+# Definir variables iniciales
+@serverUrl = http://localhost:3000
+@id = c72ebfb9-90bb-4d6c-ad9b-5c71fefe5159
 
 ### Obtener todos los coches
-GET http://localhost:3000/cars
+GET {{serverUrl}}/cars
 
 ### Obtener un coche por id
-GET http://localhost:3000/cars/{{id}}
+GET {{serverUrl}}/cars/{{id}}
 
 ### Crear un coche nuevo
-POST http://localhost:3000/cars
+POST {{serverUrl}}/cars
 Content-Type: application/json
 
 {
   "brand": "Volvo",
-  "model": "XC40",
-  "puertas": 3
+  "model": "XC40"
 }
 
 ### Actualizar un coche
-PATCH http://localhost:3000/cars/{{id}}
+PATCH {{serverUrl}}/cars/{{id}}
 Content-Type: application/json
 
 {
@@ -28,5 +28,5 @@ Content-Type: application/json
 }
 
 ### Borrar un coche
-DELETE http://localhost:3000/cars/{{id}}
+DELETE {{serverUrl}}/cars/{{id}}
 
