@@ -21,3 +21,12 @@ levantar el servicio de docker de forma desatendida
 ```bash
   docker-compose up -d 
 ```
+
+Datos de conexión base de datos mongo:
+URL: mongodb://localhost:27017/nest-pokemon
+
+Instalar la librería de mongoose:
+```bash
+  # npm i @nestjs/mongoose mongoose
+  yarn add @nestjs/mongoose mongoose
+```
