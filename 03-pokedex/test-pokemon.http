@@ -1,7 +1,7 @@
 # Definir variables iniciales
 @serverUrl = http://localhost:3000
 @prefix = /api/v2
-@id = 2c17835e-f60c-47c4-b16f-275cc503fa6d
+@id = 68b54558a5860c80e7b1e262
 
 ### Obtener todos los pokemon
 GET {{serverUrl}}{{prefix}}/pokemon
@@ -14,8 +14,8 @@ POST {{serverUrl}}{{prefix}}/pokemon
 Content-Type: application/json
 
 {
-    "no": 1,
-    "name": "Bulbasaur"
+    "no": 4,
+    "name": "Charmander"
 }
 
 ### Actualizar un coche
@@ -23,7 +23,7 @@ PATCH {{serverUrl}}{{prefix}}/pokemon/{{id}}
 Content-Type: application/json
 
 {
-    "name": "Volvo1"
+    "name": "bulbasaur3"
 }
 
 ### Borrar un coche
