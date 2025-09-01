@@ -30,3 +30,8 @@ Instalar la librería de mongoose:
   # npm i @nestjs/mongoose mongoose
   yarn add @nestjs/mongoose mongoose
 ```
+
+Validaciones
+```bash
+    yarn add class-validator class-transformer
+```

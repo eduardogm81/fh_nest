@@ -14,7 +14,8 @@ POST {{serverUrl}}{{prefix}}/pokemon
 Content-Type: application/json
 
 {
-    "name": "Volvo"
+    "no": 1,
+    "name": "Bulbasaur"
 }
 
 ### Actualizar un coche
