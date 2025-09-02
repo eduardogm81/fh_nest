@@ -6,6 +6,9 @@
 ### Obtener todos los pokemon
 GET {{serverUrl}}{{prefix}}/pokemon
 
+### Obtener todos los pokemon con limite
+GET {{serverUrl}}{{prefix}}/pokemon?limit=5&offset=5
+
 ### Obtener un pokemon por id
 GET {{serverUrl}}{{prefix}}/pokemon/{{id}}
 
